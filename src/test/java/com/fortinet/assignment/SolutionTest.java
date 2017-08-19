@@ -27,7 +27,6 @@ public class SolutionTest {
     @Test
     public void reverseList() throws Exception {
         Node actualList = new NodeBuilder().add(1).add(2).add(3).add(4).build();
-        ;
         Node expectedReversedNode = new NodeBuilder().add(4).add(3).add(2).add(1).build();
         Node actualReversedNode = solution.reverseList(actualList);
         Assert.assertEquals("Expected and Actual List don't match", expectedReversedNode, actualReversedNode);
