@@ -1,9 +1,8 @@
-package com.fortinet.assignment;
+package com.fortinet.assignmentOne;
 
 public class Solution {
 
     public Node reverseList(Node node) {
-
         Node currentNode, previousNode, nextNode;
         previousNode = null;
         currentNode = node;
@@ -15,5 +14,4 @@ public class Solution {
         }
         return previousNode;
     }
-
 }

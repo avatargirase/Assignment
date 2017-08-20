@@ -1,4 +1,4 @@
-package com.fortinet.assignment;
+package com.fortinet.assignmentOne;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,6 +9,14 @@ import org.junit.Test;
 public class SolutionTest {
 
     private Solution solution = new Solution();
+
+    @Test
+    public void reverseList() throws Exception {
+        Node actualList = new NodeBuilder().add(1).add(2).add(3).add(4).build();
+        Node expectedReversedNode = new NodeBuilder().add(4).add(3).add(2).add(1).build();
+        Node actualReversedNode = solution.reverseList(actualList);
+        Assert.assertEquals("Expected and Actual List do match", expectedReversedNode, actualReversedNode);
+    }
 
     @Test
     public void reverseNullList() throws Exception {
@@ -24,13 +32,6 @@ public class SolutionTest {
         Assert.assertEquals("Expected and Actual List don't match", singleNode, reversedSingleNode);
     }
 
-    @Test
-    public void reverseList() throws Exception {
-        Node actualList = new NodeBuilder().add(1).add(2).add(3).add(4).build();
-        Node expectedReversedNode = new NodeBuilder().add(4).add(3).add(2).add(1).build();
-        Node actualReversedNode = solution.reverseList(actualList);
-        Assert.assertEquals("Expected and Actual List don't match", expectedReversedNode, actualReversedNode);
-    }
 
     @Test(expected = AssertionError.class)
     public void reverseMismatchList() throws Exception {

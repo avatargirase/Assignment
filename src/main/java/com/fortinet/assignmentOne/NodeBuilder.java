@@ -1,4 +1,6 @@
-package com.fortinet.assignment;
+package com.fortinet.assignmentOne;
+
+import java.util.Observer;
 
 public class NodeBuilder {
 
@@ -17,6 +19,8 @@ public class NodeBuilder {
     }
 
     public Node build() {
+
+
         return head;
     }
 }

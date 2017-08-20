@@ -1,4 +1,4 @@
-package com.fortinet.assignment;
+package com.fortinet.assignmentOne;
 
 /**
  * Created by Avatar Girase Using Intellij on 8/19/2017.
@@ -30,6 +30,7 @@ class Node {
 
     @Override
     public int hashCode() {
+        System.out.println("Called");
         int result = 31 * value;
         if (next != null) {
             result *= next.hashCode();
