@@ -1,6 +1,6 @@
 package com.fortinet.assignmentOne;
 
-public class Solution {
+public class NodeUtil {
 
     public Node reverseList(Node node) {
         Node currentNode, previousNode, nextNode;

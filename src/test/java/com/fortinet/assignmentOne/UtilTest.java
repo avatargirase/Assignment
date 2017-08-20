@@ -6,9 +6,9 @@ import org.junit.Test;
 /**
  * Created by Avatar Girase on 8/19/2017.
  */
-public class SolutionTest {
+public class UtilTest {
 
-    private Solution solution = new Solution();
+    private NodeUtil solution = new NodeUtil();
 
     @Test
     public void reverseList() throws Exception {
