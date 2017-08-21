@@ -1,7 +1,7 @@
-package com.fortinet.assignmentOne;
+package com.fortinet.questionone;
 
 /**
- * Created by Avatar Girase Using Intellij on 8/19/2017.
+ * Created by Avatar Girase Using Intellij on 8/14/2017.
  */
 class Node {
 
@@ -17,6 +17,7 @@ class Node {
         this(value, null);
     }
 
+    // For checking equality of two nodes and subsequent nodes if any
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,8 +39,10 @@ class Node {
         return result;
     }
 
+    //To Print Node and its subsequent Nodes
     @Override
     public String toString() {
+        // StringBuilder used to get mutable string object
         StringBuilder builder = new StringBuilder();
         Node pointer = this;
         while (pointer != null) {

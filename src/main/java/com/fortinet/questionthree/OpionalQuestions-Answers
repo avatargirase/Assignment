@@ -1,0 +1,21 @@
+Question - 3:
+
+a) What is Session in Hibernate?
+
+The  hibernate architecture has many objects and session is one of them.
+A session object represents a database connection and once we have a Session
+object we can perform all the CRUD (Create, Read, Update,Delete ) operation.
+We can get a session by calling an open session  method of the SessionFactory
+interface.The object which is not passed to the save method of the session then
+such object is called as transient object. After we save the object using the save
+method of the session then such object becomes persistent and once we close the session
+then such object goes in detached state i.e this object is not associated with the session.
+
+b) How would you control transaction with Spring & Hibernate. Answer with different scenarios.
+
+Answer :
+
+  1>
+  2>
+  3>
+  ...
