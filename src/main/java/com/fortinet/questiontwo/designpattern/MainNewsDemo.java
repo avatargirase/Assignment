@@ -1,4 +1,4 @@
-package com.fortinet.questiontwo;
+package com.fortinet.questiontwo.designpattern;
 
 /**
  * Question 2. Describe the Scenario

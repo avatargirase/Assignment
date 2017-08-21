@@ -1,4 +1,4 @@
-package com.fortinet.questionone;
+package com.fortinet.questionone.nodereversal;
 
 import org.junit.Assert;
 import org.junit.Test;

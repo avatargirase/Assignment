@@ -1,4 +1,4 @@
-package com.fortinet.questiontwo;
+package com.fortinet.questiontwo.designpattern;
 
 import java.util.ArrayList;
 import java.util.List;

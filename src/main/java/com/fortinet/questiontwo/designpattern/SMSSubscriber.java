@@ -1,4 +1,4 @@
-package com.fortinet.questiontwo;
+package com.fortinet.questiontwo.designpattern;
 
 /**
  * Created by Avatar Girase on 8/20/2017.
