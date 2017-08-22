@@ -1,21 +1,45 @@
-Question - 3:
+Question - 3
 
 a) What is Session in Hibernate?
 
-The  hibernate architecture has many objects and session is one of them.
-A session object represents a database connection and once we have a Session
-object we can perform all the CRUD (Create, Read, Update,Delete ) operation.
-We can get a session by calling an open session  method of the SessionFactory
-interface.The object which is not passed to the save method of the session then
-such object is called as transient object. After we save the object using the save
-method of the session then such object becomes persistent and once we close the session
-then such object goes in detached state i.e this object is not associated with the session.
+Answer : The hibernate architecture has many objects and session is one of them. A session
+object represents a database connection and once we have a Session object we can perform all
+the CRUD (Create, Read, Update, Delete ) operation. We can get a session by calling an open
+session method of the SessionFactory interface. The object which is not passed to the save
+method of the session then such object becomes a transient object. After we save the object
+using the save method of the session then such object becomes persistent and once we close
+the session then such object goes in detached state i.e this object is not associated with the session.
 
-b) How would you control transaction with Spring & Hibernate. Answer with different scenarios.
+b) How would you control transaction with Spring & Hibernate? Answer with different scenarios.
 
-Answer :
+Answer:-
 
-  1>
-  2>
-  3>
-  ...
+Transaction management plays an important role to ensure the data consistency in the database.
+Spring support both programmatic and declarative transactions. With Programmatic Transactions,
+the transaction management code like commit code when everything goes successful or rolling back
+the transaction when something goes wrong can be clubbed with the business logic. On the other hand
+with Declarative Transactions separates business logic from transaction management code. Spring uses
+Aspect-Oriented Programming to support declarative transactions via XML configuration or @Transactional
+annotation. Spring supports many transaction managers to delegate the transaction management task. For
+instance, it uses hibernate transaction manager when our application uses Hibernate like below. When using
+the @Transactional annotation without any parameter then by default Propagation mode is set to REQUIRED,
+ReadOnly is set to false and the isolation level is set to the database default which is generally READ_COMMITTED.
+It is always good practice to specify the ReadOnly attribute as it increases the performance of the application.
+The transaction propagation which is REQUIRED by default means that the same transaction will propagate from a transactional
+caller to transaction which is called. It will either create a new transaction or reuse the one if available. If a
+read only transaction calls a read write transaction method then the complete transaction will be read only. When we
+have multiple transactions within an application that run against the database we need to isolate the underlying the
+data for each transaction which can be controlled by specifying Isolation level in the @Transactional annotation. Examples
+of the Isolation used by the springs to resolve database anomalies such as Dirty Reads, Non-Repeatable Reads, and Phantom
+Reads are as follows
+
+ISOLATION_READ_UNCOMMITTED: The transaction can read uncommitted data and this is where anomalies like dirty reads,
+    non repeatable reads and phantom reads can occur.
+
+ISOLATION_READ_COMMITED: This level ensures that our transaction reads only commited data from the database.We can
+    avoid dirty reads using this isolation level but other anomalys can still occur.
+
+ISOLATION_REPEATABLE_READ: This is the most used isolation level.It is used to prevent all the anomalys except Phantom reads.
+
+ISOLATION_SERIALIZABLE: This is the highest isolation level. Though this prevents all the three anomalys like dirty reads,
+    non repeatable reads and phantom reads,The excessive use of this isolation will decreases the overall performance of the application as no two transaction can work on same set of the data at the same time.

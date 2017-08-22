@@ -1,7 +1,7 @@
 package com.fortinet.questiontwo.designpattern;
 
 /**
- * Question 2. Describe the Scenario
+ * Question 2. Describe the Scenario : Observer Pattern
  *
  * Consider a scenario where the news publisher wants to publish it's news to the different types
  * of subscriber as soon as the new news comes in. This creates a one to many relationship
@@ -9,7 +9,9 @@ package com.fortinet.questiontwo.designpattern;
  * pattern where the susbscriber will be notified as soon as the news is posted by the
  * news publisher they subscribed to. In this implemenation the SMS subscriber and Mail subscriber
  * both gets notified as soon as the news is set by the Business News Publisher.
- * Advantage Of Observer Pattern  :
+ *
+ * Advantage:
+ *
  * 1) Decouple an object from those that want to watch it.
  * 2) Observer can take what they want by registering or unregistering from the publisher
  * 3) Observer need not have to pull information from the publiher.
