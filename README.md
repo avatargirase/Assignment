@@ -4,7 +4,7 @@ Reverses a single list. Need answer with Java code
 
     a)  Algorithm 
     
-    Please check NodeUtil.java in the below path for implementaion of the node reversal logic
+    Please check NodeUtil.java in the below path for implementation of the node reversal logic
          
          src/main/java/com/fortinet/questionone/nodereversal/NodeUtil.java
          
@@ -17,7 +17,7 @@ Reverses a single list. Need answer with Java code
 Question - 2
 Describe the Scenario : Observer Pattern
 
- Consider a scenario where the news publisher wants to publish it's news to the different types  of subscriber as soon as the new news comes in. This creates a one to many relationship  between the news publisher and its subscribers and hence I am using a Observer design  pattern where the susbscriber will be notified as soon as the news is posted by the  news publisher they subscribed to. In this implemenation the SMS subscriber and Mail subscriber  both gets notified as soon as the news is set by the Business News Publisher.
+ Consider a scenario where the news publisher wants to publish it's news to the different types  of subscriber as soon as the new news comes in. This creates a one to many relationship  between the news publisher and its subscribers and hence I am using a Observer design  pattern where the subscriber will be notified as soon as the news is posted by the  news publisher they subscribed to. In this implementation the SMS subscriber and Mail subscriber  both gets notified as soon as the news is set by the Business News Publisher.
 
 Advantage :
  1) Decouple an object from those that want to watch it.
@@ -52,8 +52,8 @@ Examples of the Isolation used by  the springs to resolve database anomalies suc
 
 ISOLATION_READ_UNCOMMITTED:  The transaction can read uncommitted data and this is where anomalies like dirty reads, non repeatable reads and phantom reads can occur.  
 
-ISOLATION_READ_COMMITED:  This level ensures that our transaction reads only commited data from the database.We can avoid dirty reads using this isolation level but other anomalys can still occur.
+ISOLATION_READ_COMMITED:  This level ensures that our transaction reads only committed data from the database. We can avoid dirty reads using this isolation level but other anomalys can still occur.
 
-ISOLATION_REPEATABLE_READ: This is the most used isolation level.It is used to prevent all the anomalys except Phantom reads. 
+ISOLATION_REPEATABLE_READ: This is the most used isolation level. It is used to prevent all the anomaly except Phantom reads. 
 
-ISOLATION_SERIALIZABLE: This is the highest isolation level. Though this prevents all the three  anomalys like dirty reads, non repeatable reads and phantom reads,The excessive use of this isolation will decreases the overall performance of the application as no two transaction can work on same set of the data at the same time.
+ISOLATION_SERIALIZABLE: This is the highest isolation level. Though this prevents all the three  anomaly like dirty reads, non repeatable reads and phantom reads,The excessive use of this isolation will decreases the overall performance of the application as no two transaction can work on same set of the data at the same time.
